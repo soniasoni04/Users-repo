@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getUsers } from "../components/actions/index";
+import { getUsers } from "../actions/index";
 
 class Home extends Component {
   state = {};
