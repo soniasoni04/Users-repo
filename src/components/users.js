@@ -18,12 +18,17 @@ class Users extends Component {
     });
   }
 
+  getBack() {
+    this.props.history.push("/home");
+  }
+
   render() {
     return (
       <div>
-        <h1>Welcome to User's reopository</h1>
-        <br />
         <main className="container">
+          <h1 className="text-primary m-3">
+            <u>Welcome to User's reopository</u>
+          </h1>
           <table className="table">
             <thead>
               <tr>
@@ -36,6 +41,9 @@ class Users extends Component {
             </thead>
             <tbody>{this.getUsersDetails()}</tbody>
           </table>
+          <button className="btn btn-primary" onClick={() => this.getBack()}>
+            Go Back
+          </button>
         </main>
       </div>
     );
