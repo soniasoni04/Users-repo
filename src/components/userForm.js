@@ -16,7 +16,7 @@ class UserForm extends Component {
   onSubmit = e => {
     e.preventDefault();
     console.log("userid from submit block: ", this.state.userId);
-    if (this.state.userId > 11) {
+    if (this.state.userId > 11 || this.state.userId < 1) {
       return this.props.history.push("/not-found");
     }
     const url = "/userform/user/" + this.state.userId;
