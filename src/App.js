@@ -7,6 +7,7 @@ import UserForm from "./components/userForm";
 import { connect } from "react-redux";
 import { getUsers } from "./actions/index";
 import "./App.css";
+import NotFound from "./components/NotFound";
 
 class App extends Component {
   componentDidMount() {
@@ -20,6 +21,7 @@ class App extends Component {
         <Route path="/users" exact component={Users} />
         <Route path="/home/userform" component={UserForm} />
         <Route path="/userform/user/:id" exact component={User} />
+        <Route path="/not-found" component={NotFound} />
       </div>
     );
   }
