@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class Users extends Component {
-  state = {};
-
   getUsersDetails() {
     return this.props.users.map(user => {
       return (
@@ -51,8 +49,6 @@ class Users extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("state from mapStateTo props : ", state.users);
-
   return {
     users: state.users
   };
