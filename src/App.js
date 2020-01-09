@@ -1,13 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
+import { Route } from "react-router-dom";
 import Home from "./components/home";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <Home />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Route path="/home" exact component={Home} />
+      </div>
+    );
+  }
 }
 
 export default App;
