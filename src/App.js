@@ -9,10 +9,8 @@ import UserForm from "./components/userForm";
 import NotFound from "./components/NotFound";
 import "./App.css";
 
-
 class App extends Component {
   componentDidMount() {
-    console.log("component did mount");
     this.props.getUsers();
   }
   render() {

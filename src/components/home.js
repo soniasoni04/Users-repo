@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
-    const users = ["Users Details", "Get User Full Details"];
     return (
       <div>
         <h1>Welcome to User's reopository</h1>

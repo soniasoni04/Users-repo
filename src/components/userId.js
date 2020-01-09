@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class User extends Component {
-
   getUserData() {
     const { id } = this.props.match.params;
     const userId = parseInt(id);
@@ -23,7 +22,10 @@ class User extends Component {
         <main className="container">
           {user.map(user => {
             return (
-              <table className="table border table-active">
+              <table
+                key={user.userId + 1}
+                className="table border table-active"
+              >
                 <tbody>
                   <tr>
                     <th scope="row">User ID :</th>
