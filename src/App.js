@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import Home from "./components/home";
 import Users from "./components/users";
 import User from "./components/userId";
+import UserForm from "./components/userForm";
 import { connect } from "react-redux";
 import { getUsers } from "./actions/index";
 import "./App.css";
@@ -15,9 +16,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Route path="/home" exact component={Home} />
+        <Route path="/home" component={Home} />
         <Route path="/users" exact component={Users} />
-        <Route path="/users/:id" exact component={User} />
+        <Route path="/home/userform" component={UserForm} />
+        <Route path="/userform/user/:id" exact component={User} />
       </div>
     );
   }
