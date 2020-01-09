@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
+import { connect } from "react-redux";
+import { getUsers } from "./actions/index";
 import Home from "./components/home";
 import Users from "./components/users";
 import User from "./components/userId";
 import UserForm from "./components/userForm";
-import { connect } from "react-redux";
-import { getUsers } from "./actions/index";
-import "./App.css";
 import NotFound from "./components/NotFound";
+import "./App.css";
+
 
 class App extends Component {
   componentDidMount() {

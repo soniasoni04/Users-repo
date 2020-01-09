@@ -2,14 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class User extends Component {
-  state = {};
 
   getUserData() {
     const { id } = this.props.match.params;
     const userId = parseInt(id);
-    console.log("user id is : ", userId);
     const user = this.props.users.filter(user => user.id === userId);
-    console.log(user);
     return user;
   }
 
@@ -99,8 +96,6 @@ class User extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("state from mapStateTo props : ", state.users);
-
   return {
     users: state.users
   };

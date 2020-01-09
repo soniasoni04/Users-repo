@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class UserForm extends Component {
   state = {
@@ -10,17 +9,14 @@ class UserForm extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-    console.log("userid: ", this.state.userId);
   };
 
   onSubmit = e => {
     e.preventDefault();
-    console.log("userid from submit block: ", this.state.userId);
     if (this.state.userId > 11 || this.state.userId < 1) {
       return this.props.history.push("/not-found");
     }
     const url = "/userform/user/" + this.state.userId;
-    console.log("url:", url);
     this.props.history.push(url);
   };
   render() {
