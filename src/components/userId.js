@@ -52,34 +52,47 @@ class User extends Component {
                     <td>{user.website}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Address : </th>
-                    <tr>
-                      <th scope="row">Street -</th>
-                      <td>{user.address.street}</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">City -</th>
-                      <td>{user.address.city}</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Zipcode -</th>
-                      <td>{user.address.zipcode}</td>
-                    </tr>
+                    <th scope="row" rowSpan="4">
+                      Address :
+                    </th>
                   </tr>
                   <tr>
-                    <th scope="row">Company :</th>
-                    <tr>
-                      <th scope="row">Name -</th>
-                      <td>{user.company.name}</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">CatchPhrase -</th>
-                      <td>{user.company.catchPhrase}</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">BS -</th>
-                      <td>{user.company.bs}</td>
-                    </tr>
+                    <td>
+                      <b>Street : </b>
+                      {user.address.street}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <b>City : </b>
+                      {user.address.city}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <b>Zipcode : </b>
+                      {user.address.zipcode}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" rowSpan="4">
+                      Company :
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <b>Name : </b> {user.company.name}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <b>CatchPhrase : </b> {user.company.catchPhrase}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <b>BS : </b> {user.company.bs}
+                    </td>
                   </tr>
                 </tbody>
               </table>
